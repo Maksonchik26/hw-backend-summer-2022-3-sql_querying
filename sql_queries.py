@@ -2,7 +2,7 @@
 # Duration - разница между scheduled_arrival и scheduled_departure.
 # В ответе должно быть 2 колонки [flight_no, duration]
 TASK_1_QUERY = """
-SELECT flight_no, (scheduled_arrival - scheduled_departure) AS duration FROM bookings.flights ORDER BY duration LIMIT 5;
+SELECT flight_no, (scheduled_arrival - scheduled_departure) AS duration FROM demo.flights ORDER BY duration LIMIT 5;
 """
 #  flight_no | duration
 # -----------+----------
@@ -17,7 +17,7 @@ SELECT flight_no, (scheduled_arrival - scheduled_departure) AS duration FROM boo
 # количество упоминаний которых меньше 50
 # В ответе должно быть 2 колонки [flight_no, count]
 TASK_2_QUERY = """
-SELECT flight_no, count(flight_no) FROM bookings.flights GROUP BY flight_no HAVING count(flight_no) < 50 ORDER BY count(flight_no) DESC LIMIT 3;
+SELECT flight_no, count(flight_no) FROM demo.flights GROUP BY flight_no HAVING count(flight_no) < 50 ORDER BY count(flight_no) DESC LIMIT 3;
 """
 #  flight_no | count
 # -----------+-------
