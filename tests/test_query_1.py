@@ -23,3 +23,4 @@ async def test_query_1(engine: Engine) -> None:
         ("PG0235", datetime.timedelta(seconds=1500)),
         ("PG0234", datetime.timedelta(seconds=1500)),
     ]
+
